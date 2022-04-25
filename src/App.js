@@ -1,27 +1,50 @@
-import logo from './logo.svg';
-import './App.css';
-import { NavBar } from "./NavBar";
+import React from 'react';
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import Home from './Home.js';
+import GetPosturized from './projects/GetPosturized.js';
+import Navbar from './components/Navbar.js';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <NavBar />
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload. Test
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  render() {
+    return (
+      <BrowserRouter>
+        <Navbar/>
+        <Routes>
+          <Route path='/' element={<Home/>}/>
+          <Route path='/get-posturized' element={<GetPosturized/>}/>
+        </Routes>
+      </BrowserRouter>
+    );
+  }
+  /*
+  const pages = [
+    {
+      name: 'Home',
+      element: <Home/>,
+      path: '/',
+    },
+    {
+      name: 'GetPosturized',
+      element: <GetPosturized/>,
+      path: '/get-posturized',
+    }
+  ];
+
+  const routeComponents = pages.map(({path, element}) => (
+    <Route path={path} element={{element}}/> // <-- exact prop to exactly match paths
+  ));
+
+    return (
+      <Router>
+        <Navbar pages={pages}/>
+        <div>
+          <Routes>
+            {routeComponents}
+          </Routes>
+        </div>
+      </Router>
+    );
+    */
 }
 
 export default App;
