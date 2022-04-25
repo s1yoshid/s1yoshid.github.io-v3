@@ -25,8 +25,8 @@ class Navbar extends React.Component {
           <h2>Shuusei Yoshida</h2>
         </header>
         <ul>
-          <li tabindex="0" class="icon-dashboard"><span><Link to='/'> Home </Link></span></li>
-          <li tabindex="0" class="icon-customers"><span><Link to='get-posturized'> Get Posturized </Link></span></li>
+          <li tabindex="0" class="icon-dashboard"><span><Link to='/s1yoshid.github.io-v3'> Home </Link></span></li>
+          <li tabindex="0" class="icon-customers"><span><Link to='/s1yoshid.github.io-v3/get-posturized'> Get Posturized </Link></span></li>
           <li tabindex="0" class="icon-users"><span>Users</span></li>
           <li tabindex="0" class="icon-settings"><span>Settings</span></li>
         </ul>

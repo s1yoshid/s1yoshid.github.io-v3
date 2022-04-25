@@ -10,8 +10,8 @@ class App extends React.Component {
       <BrowserRouter>
         <Navbar/>
         <Routes>
-          <Route path='/' element={<Home/>}/>
-          <Route path='/get-posturized' element={<GetPosturized/>}/>
+          <Route path='/s1yoshid.github.io-v3' element={<Home/>}/>
+          <Route path='/s1yoshid.github.io-v3/get-posturized' element={<GetPosturized/>}/>
         </Routes>
       </BrowserRouter>
     );
